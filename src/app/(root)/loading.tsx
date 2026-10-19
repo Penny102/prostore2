@@ -1,0 +1,9 @@
+export default function Loading() {
+  return (
+    <div className='flex min-h-[60vh] w-full flex-col items-center justify-center gap-2'>
+      {/* Un spinner nativo elegante con Tailwind v4 */}
+      <div className='h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent' />
+      <p className='text-sm text-muted-foreground animate-pulse'>Laden...</p>
+    </div>
+  );
+}
