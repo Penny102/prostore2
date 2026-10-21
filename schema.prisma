@@ -1,10 +1,11 @@
 generator client {
-  provider = "prisma-client-js"
+  provider = "prisma-client" // Cambiado en Prisma 7 (sin el "-js")
+  output   = "./generated/prisma" // OBLIGATORIO en Prisma 7 para guardar los tipos locales
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "postgresql" // Configuración nativa para tu base de datos de Vercel
+  // NOTA: Aquí ya NO va la línea "url = env(...)", esa se movió a prisma.config.ts
 }
 
 model Product {

@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Excluir el cliente generado de Prisma 7
+generated/
+
+# Bloquear las credenciales de la base de datos
+.env
+.env.local
+.env.production
